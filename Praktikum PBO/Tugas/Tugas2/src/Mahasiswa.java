@@ -11,7 +11,7 @@ public class Mahasiswa {
         nama = scanner.nextLine();
         System.out.print("Masukkan NIM: ");
         nim = scanner.nextLine();
-        if (nama.equalsIgnoreCase(namaValid) && nim.equals(nimValid)){
+        if (nama.equals(namaValid) && nim.equals(nimValid)){
             displayInfo();
         } else {
             System.out.println("Login gagal! Nama atau NIM salah!");

@@ -1,18 +1,10 @@
 import java.util.Date;
 public class Main {
     public static void main(String[] args) {
-        Farmer farmer1 = new Farmer();
-        Farmer farmer2 = new Farmer();
-        Plant plant1 = new Plant();
-        Plant plant2 = new Plant();
-
-        farmer1.name = "Crazy Dave";
-        farmer2.name = "Sober Dave";
-        plant1.name = "Kipli";
-        plant2.name = "Ucup";
-
-        farmer1.favourite = plant1.name;
-        farmer2.favourite = plant2.name;
+        Plant plant1 = new Plant("Kipli");
+        Plant plant2 = new Plant("Ucup");
+        Farmer farmer1 = new Farmer("Agus", plant2.name);
+        Farmer farmer2 = new Farmer("Bambang", plant1.name);
 
         System.out.println("Hello World");
         System.out.println("Current date and time : " + new Date());
