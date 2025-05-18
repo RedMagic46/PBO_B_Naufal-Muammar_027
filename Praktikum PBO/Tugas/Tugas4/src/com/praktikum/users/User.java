@@ -19,9 +19,7 @@ public abstract class User {
 
     public abstract boolean login(String input1, String input2);
 
-    public void displayInfo() {
-
-    }
+    public void displayInfo(){}
 
     public abstract void displayAppMenu();
 }

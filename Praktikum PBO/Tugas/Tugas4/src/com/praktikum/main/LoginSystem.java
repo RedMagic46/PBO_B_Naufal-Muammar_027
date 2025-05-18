@@ -5,8 +5,8 @@ import com.praktikum.users.*;
 public class LoginSystem {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        User user = null;
         int pilihan;
+
         do {
             System.out.println();
             System.out.println("Menu: ");
@@ -26,8 +26,7 @@ public class LoginSystem {
 
                 if (admin.login(username, password)) {
                     admin.displayInfo();
-                    user = admin;
-                    user.displayAppMenu();
+                    admin.displayAppMenu();
                 } else {
                     System.out.println("Login gagal! Username atau password salah!");
                 }
@@ -41,8 +40,7 @@ public class LoginSystem {
 
                 if (mhs.login(nama, nim)) {
                     mhs.displayInfo();
-                    user = mhs;
-                    user.displayAppMenu();
+                    mhs.displayAppMenu();
                 } else {
                     System.out.println("Login gagal! Nama atau NIM salah!");
                 }

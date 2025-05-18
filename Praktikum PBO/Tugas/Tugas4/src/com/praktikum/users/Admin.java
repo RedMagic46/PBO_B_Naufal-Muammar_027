@@ -7,6 +7,24 @@ public class Admin extends User implements AdminActions {
     private String password;
     Scanner scanner = new Scanner(System.in);
 
+    public Admin(String username, String password, String nama, String nim) {
+        super(nama, nim);
+        this.username = username;
+        this.password = password;
+    }
+
+    @Override
+    public boolean login(String inputUsername, String inputPassword) {
+        return username.equals(inputUsername) && password.equals(inputPassword);
+    }
+
+    @Override
+    public void displayInfo() {
+        System.out.println("Login Admin berhasil!");
+        System.out.println("Nama: " + getNama());
+        System.out.println("NIM: " + getNim());
+    }
+
     public void manageItems(){
         System.out.println(">>Fitur Kelola Barang Belum Tersedia");
     }
@@ -36,23 +54,5 @@ public class Admin extends User implements AdminActions {
                 System.out.println("Pilihan Tidak Valid");
             }
         } while (pilihan != 0);
-    }
-
-    public Admin(String username, String password, String nama, String nim) {
-        super(nama, nim);
-        this.username = username;
-        this.password = password;
-    }
-
-    @Override
-    public boolean login(String inputUsername, String inputPassword) {
-        return username.equals(inputUsername) && password.equals(inputPassword);
-    }
-
-    @Override
-    public void displayInfo() {
-        System.out.println("Login Admin berhasil!");
-        System.out.println("Nama: " + getNama());
-        System.out.println("NIM: " + getNim());
     }
 }
