@@ -64,7 +64,7 @@ public class Admin extends User implements AdminActions {
                     try {
                         Barang barang = LoginSystem.barangDilaporkan.get(index);
                         if (barang.getStatus().equals("Reported")) {
-                            barang.setStatus("Telah diambil");
+                            barang.setStatus("Claimed");
                             System.out.println("Barang berhasil ditandai sebagai 'Telah diambil'.");
                         } else {
                             System.out.println("Barang sudah ditandai sebelumnya.");
