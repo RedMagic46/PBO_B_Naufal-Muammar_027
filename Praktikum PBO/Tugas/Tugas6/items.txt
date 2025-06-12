@@ -1,0 +1,4 @@
+Kunci,Kunci Motor,Meja A-01,Claimed,027
+Laptop,Warna Biru,Meja B-05,Reported,123
+ksowksokwok,oaojasojoj,oskwokshduhw,Reported,123
+123,456,789,Reported,123
